@@ -1,0 +1,2 @@
+language = "java"
+run = "cd src/main/java && javac RecipeSearch.java && java RecipeSearch"
