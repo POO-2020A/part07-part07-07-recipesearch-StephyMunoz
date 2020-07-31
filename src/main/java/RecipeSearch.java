@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class RecipeSearch {
 
     public static void main(String[] args) {
-        ArrayList<String> nameRecipes = new ArrayList<>();
         ArrayList<String> recipes = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.print("File to read: ");
@@ -36,14 +35,10 @@ public class RecipeSearch {
                 } else if (command.equals("list")) {
                     System.out.println("Recipes:");
                     System.out.print(recipes.get(0) + ", cooking time: " + recipes.get(1));
-                    nameRecipes.add(recipes.get(0));
-                    nameRecipes.add(recipes.get(1));
                     System.out.println("");
                     for (int i = 0; i < recipes.size(); i++) {
 
                         if (recipes.get(i).equals("")) {
-                            nameRecipes.add(recipes.get(i + 1));
-                            nameRecipes.add(recipes.get(i + 2));
                             System.out.print(recipes.get(i + 1) + ", cooking time: " + recipes.get(i + 2));
                             System.out.println("");
                         }
